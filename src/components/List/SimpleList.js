@@ -2,19 +2,27 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 
-const NavigationWrapper = styled.ul`
+import CheckedIcon from '../../images/checked-icon.svg';
+
+const StyledList = styled.ul`
   width: 100%;
-  max-width: 300px;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 `;
-const NavigationItem = styled.li`
+const ListItem = styled.li`
+  display: flex;
   color: black;
   padding: 15px;
   text-decoration: none;
   list-style-type: none;
   width: 100%;
+  align-items: center;
+  @media (min-width: 768px) {
+    width: 50%;
+
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -22,15 +30,47 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
+const StyledIcon = styled.img`
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+`;
 const SimpleList = ({ props }) => (
-  <ul>
-    <li>ikona  tekst</li>
-    <li>ikona  tekst</li>
-    <li>ikona  tekst</li>
-    <li>ikona  tekst</li>
-    <li>ikona  tekst</li>
-    <li>ikona  tekst</li>
-  </ul>
+  <StyledList>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
+    </ListItem>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
+    </ListItem>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
+    </ListItem>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
+    </ListItem>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
+    </ListItem>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
+    </ListItem>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
+    </ListItem>
+    <ListItem>
+      <StyledIcon src={CheckedIcon}/>
+      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
+    </ListItem>
+  </StyledList>
 )
 
 export default SimpleList
