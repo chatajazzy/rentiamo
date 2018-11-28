@@ -64,14 +64,15 @@ const HeaderSubheading = styled.p`
     font-size: 120%
   }
 `;
-const HeaderCtaBtn = styled.button`
+const HeaderCtaBtn = styled.a`
   border: 2px solid #434343;
   background: transparent;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 12px 25px;
   color: #434343;
   text-transform: uppercase;
   font-weight: 700;
+  text-decoration: none;
   &:hover {
     color: white;
     background: #4064d7;
@@ -94,7 +95,7 @@ const Header = ({ props }) => (
       <HeaderTextContainer>
         <HeaderHeading>Zarządzanie najmem z gwarancją czynszu</HeaderHeading>
         <HeaderSubheading>Wynajmiemy mieszkanie na długi termin i zajmiemy się najmem za Ciebie!</HeaderSubheading>
-        <HeaderCtaBtn>Sprawdź Ofertę</HeaderCtaBtn>
+        <HeaderCtaBtn href="#">Sprawdź Ofertę</HeaderCtaBtn>
       </HeaderTextContainer>
     </div>
 

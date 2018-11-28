@@ -22,6 +22,7 @@ const NavigationItem = styled.li`
 const StyledLink = styled(Link)`
   color: #434343;
   text-decoration: none;
+  font-weight: 700;
   &:hover {
     color: #4064d7;
   }
