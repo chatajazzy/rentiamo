@@ -8,8 +8,8 @@ import RentiamoLogo from '../../images/rentiamo-logo.png';
 
 const HeaderWrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
-  background-image: url(${HeaderImage});
+  background-image: ${props => (props.isHeroVisible ? `url(${HeaderImage})` : 'none')};
+  min-height: ${props => (props.isHeroVisible ? '100vh' : 'none')};
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,6 +37,7 @@ const LogoLink = styled(Link)`
   text-decoration: none;
 `;
 const HeaderTextContainer = styled.div`
+  display: ${props => (props.isVisible ? 'block' : 'none')};
   margin-top: 100px;
   @media (min-width: 768px) {
     max-width: 450px;
@@ -82,7 +83,7 @@ const HeaderCtaBtn = styled.a`
 const StyledRentiamoLogo = styled.img`
 `;
 const Header = ({ props }) => (
-  <HeaderWrapper>
+  <HeaderWrapper isHeroVisible={props && props.path == '/*' ? true : false}>
     <HeaderBar>
       <LogoWrapper>
         <LogoLink to={'/'}>
@@ -92,7 +93,7 @@ const Header = ({ props }) => (
       <Navigation/>
     </HeaderBar>
     <div style={{maxWidth: '1200px', margin: 'auto', padding: '0 15px'}}>
-      <HeaderTextContainer>
+      <HeaderTextContainer isVisible={props && props.path == '/*' ? true : false}>
         <HeaderHeading>Zarządzanie najmem z gwarancją czynszu</HeaderHeading>
         <HeaderSubheading>Wynajmiemy mieszkanie na długi termin i zajmiemy się najmem za Ciebie!</HeaderSubheading>
         <HeaderCtaBtn href="#">Sprawdź Ofertę</HeaderCtaBtn>

@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     line-height: 1.5;
+    color: #545454;
   }
 `;
 const StyledWrapper = styled.div`
@@ -77,10 +78,10 @@ const SectionSubheading = styled.p`
     font-size: 16px;
   }
 `;
-const IndexPage = () => (
+const IndexPage = (props) => (
   <div>  
     <GlobalStyle/>
-    <Header/>
+    <Header props={props}/>
     <StyledWrapper>
       <SectionHeading>Potrzebujesz zarządzania z gwarancją czynszu?</SectionHeading>
       <SectionSubheading>Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.</SectionSubheading>
