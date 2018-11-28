@@ -1,11 +1,14 @@
 import React from 'react'
-import Layout from '../components/layout'
+import { Link } from 'gatsby'
+
+import Header from '../components/Header/Header';
 
 const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  <div>
+    <Header/>
+    <h1>Nie ma takiej strony</h1>
+    <Link to={'/'}>Wróć na start</Link>
+  </div>
 )
 
 export default NotFoundPage
