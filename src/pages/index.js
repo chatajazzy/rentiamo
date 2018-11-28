@@ -32,6 +32,9 @@ const GlobalStyle = createGlobalStyle`
   a {
     transition: all 0.25s ease-in-out;
   }
+  p {
+    line-height: 1.5;
+  }
 `;
 const StyledWrapper = styled.div`
   width: 100%;
@@ -44,11 +47,35 @@ const StyledWrapper = styled.div`
 `;
 const SectionHeading = styled.h2`
   text-align: center;
-  color: purple;
+  color: black;
+  font-size: 1.75em;
+  margin: 100px auto 0;
+
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #4064d7;
+    margin: 30px auto;
+    
+  }
+  @media (min-width: 768px) {
+    font-size: 2.5em;
+    max-width: 650px;
+  }
 `;
 const SectionSubheading = styled.p`
   text-align: center;
-  color: blue;
+  color: #545454;
+  font-size: 14px;
+  margin: 20px auto;
+
+  @media (min-width: 768px) {
+    max-width: 550px;
+    font-size: 16px;
+  }
 `;
 const IndexPage = () => (
   <div>  
