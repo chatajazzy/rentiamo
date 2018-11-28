@@ -1,19 +1,72 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled, { createGlobalStyle } from "styled-components"
 
-import Layout from '../components/layout'
-import Image from '../components/image'
+import Header from '../components/Header/Header';
+import SimpleGrid from '../components/Grid/SimpleGrid';
+import CardsGrid from '../components/Grid/CardsGrid';
+import SimpleList from '../components/List/SimpleList';
+import Footer from '../components/Footer/Footer';
 
+const GlobalStyle = createGlobalStyle`
+  @import url(‘https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto');
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    // color: ${props => (props.whiteColor ? 'white' : 'black')};
+    font-family: Roboto, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat;
+  }
+  ul, 
+  li {
+    list-style-type: none;
+  }
+  a {
+    transition: all 0.25s ease-in-out;
+  }
+`;
+const StyledWrapper = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media (min-width: 768px) {
+    padding: unset;
+  }
+`;
+const SectionHeading = styled.h2`
+  text-align: center;
+  color: purple;
+`;
+const SectionSubheading = styled.p`
+  text-align: center;
+  color: blue;
+`;
 const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <div>  
+    <GlobalStyle/>
+    <Header/>
+    <StyledWrapper>
+      <SectionHeading>Potrzebujesz zarządzania z gwarancją czynszu?</SectionHeading>
+      <SectionSubheading>Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.</SectionSubheading>
+      <SimpleGrid/>
+      <SectionHeading>Mamy na to sposób</SectionHeading>
+      <SectionSubheading>Zobacz co możemy zrobić dla Ciebie i twojego mieszkania.</SectionSubheading>
+      <SimpleList/>
+      <SectionHeading>Dlaczego wybrac Rentiamo?</SectionHeading>
+      <SectionSubheading>Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.</SectionSubheading>
+      <CardsGrid/>
+      </StyledWrapper>
+      <Footer/>
+  </div>
 )
 
 export default IndexPage
