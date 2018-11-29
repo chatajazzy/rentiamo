@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
-class Map extends Component {
+class ContactMap extends Component {
    render() {
     const coordinates = { 
       lat: 52.3980655, 
@@ -26,4 +26,4 @@ class Map extends Component {
    );
    }
 };
-export default Map;
+export default ContactMap;
