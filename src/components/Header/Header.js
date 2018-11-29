@@ -87,17 +87,15 @@ const HeaderCtaBtn = styled.a`
 `;
 const StyledRentiamoLogo = styled.img`
 `;
-const Header = (props) => (
+const Header = ({ props }) => (
   <HeaderWrapper isHeroVisible={props && props.path === '/*' ? true : false}>
-  {console.log('test', props)}
-
     <HeaderBar>
       <LogoWrapper>
         <LogoLink to={'/'}>
           <StyledRentiamoLogo src={RentiamoLogo} />
         </LogoLink>
       </LogoWrapper>
-      <Navigation path={props.path}/>
+      <Navigation />
     </HeaderBar>
     <div style={{maxWidth: '1200px', margin: 'auto', padding: '0 15px'}}>
       <HeaderTextContainer isVisible={props && props.path === '/*' ? true : false}>

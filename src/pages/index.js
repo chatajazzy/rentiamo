@@ -51,7 +51,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <div>  
-        <Header props={this.props}/>
+        <Header props={this.props} />
         <StyledWrapper>
           <SectionHeading id="intro-section" data-aos="fade-up">
             Potrzebujesz zarządzania z gwarancją czynszu?
