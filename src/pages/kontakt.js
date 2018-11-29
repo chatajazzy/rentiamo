@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 
-import { StyledWrapper, SectionHeading, SectionSubheading } from '../components/Common/styles';
+import { StyledWrapper, SubpageHeading, SubpageSubheading } from '../components/Common/styles';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ContactImage from '../images/contact-image.jpg';
@@ -66,8 +66,8 @@ const IndexPage = () => (
     <Header/>
     <SubpageHero />
     <SubpageIntroText>
-      <SectionHeading>Kontakt</SectionHeading>
-      <SectionSubheading>Skontaktuj sie z nami</SectionSubheading>
+      <SubpageHeading>Kontakt</SubpageHeading>
+      <SubpageSubheading>Skontaktuj sie z nami</SubpageSubheading>
     </SubpageIntroText>
     <StyledWrapper>
       <SubpageContent>      

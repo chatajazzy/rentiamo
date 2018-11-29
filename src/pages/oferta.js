@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StyledWrapper, SectionHeading, SectionSubheading } from '../components/Common/styles';
+
+import { StyledWrapper, SubpageHeading, SubpageSubheading } from '../components/Common/styles';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import SimpleList from '../components/List/SimpleList';
@@ -48,12 +49,12 @@ const IndexPage = () => (
     <Header/>
     <SubpageHero />
     <SubpageIntroText>
-      <SectionHeading>
+      <SubpageHeading>
         Oferta
-      </SectionHeading>
-      <SectionSubheading>
+      </SubpageHeading>
+      <SubpageSubheading>
         Zobacz co mozemy Ci zaoferować
-      </SectionSubheading>
+      </SubpageSubheading>
     </SubpageIntroText>
     <StyledWrapper> 
       <SubpageContent>
