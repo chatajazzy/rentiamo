@@ -17,6 +17,12 @@ const NavigationItem = styled.li`
   list-style-type: none;
   width: 100%;
   text-align: center;
+
+  &:last-child {
+    @media (min-width: 768px) {
+      padding-right: 0;
+    }
+  }
 `;
 
 const StyledLink = styled(Link)`

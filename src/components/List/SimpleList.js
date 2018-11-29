@@ -21,7 +21,6 @@ const ListItem = styled.li`
   align-items: center;
   @media (min-width: 768px) {
     width: 50%;
-
   }
 `;
 

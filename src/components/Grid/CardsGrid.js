@@ -9,6 +9,8 @@ const CardsGridList = styled.ul`
   margin: 100px 0;
   padding: 0;
   flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 `;
 const CardsGridItem = styled.li`
   text-align: center;

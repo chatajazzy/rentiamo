@@ -12,7 +12,7 @@ const FooterCtaWrapper = styled.div`
 const FooterCopyrightWrapper = styled.div`
   background-color: #3a3a3a;
   color: white;
-  padding: 20px 15px;
+  padding: 25px 15px;
 `;
 const FooterCtaText = styled.div`
   @media (min-width: 768px) {
@@ -26,17 +26,19 @@ const FooterCtaHeading = styled.h3`
 const FooterCtaSubheading = styled.p`
   color: white;
   font-size: 16px;
+  margin-bottom: 25px;
 `;
 
 const FooterCtaBtn = styled.a`
   color: white;
-  font-size: 20px;
   display: block;
   border-radius: 25px;
   border: 2px solid white;
   padding: 12px 25px;
   text-decoration: none;
-
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 0.9em;
   &:hover {
     background: white;
     color: #4064d7;
@@ -59,7 +61,7 @@ const FooterCtaInnerWrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 30px 15px;
+  padding: 5px 15px;
   max-width: 1200px;
   margin: auto;
   @media (min-width: 768px) {
@@ -72,15 +74,16 @@ const Footer = ({ props }) => (
     <FooterCtaWrapper>
       <FooterCtaInnerWrapper>      
         <FooterCtaText>   
-          <FooterCtaHeading>Zadzwon juz teraz</FooterCtaHeading>
-          <FooterCtaSubheading>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, dicta. Reiciendis neque ab, pariatur, quam fugiat reprehenderit voluptatem, eligendi nobis voluptatibus tempore sit laborum tempora est vero. Maiores, beatae sequi?</FooterCtaSubheading>
+          <FooterCtaHeading>Chciałbyś z nami współpracować?</FooterCtaHeading>
+          <FooterCtaSubheading>Myślisz, że wynajem z gwarancją czynszu to coś dla Ciebie? Masz pytania o szczegóły współpracy? A może szukasz partnera biznesowego? Zadzwoń.</FooterCtaSubheading>
         </FooterCtaText>
         <FooterCtaBtn href="tel:695931615">695 931 615</FooterCtaBtn>
       </FooterCtaInnerWrapper>
     </FooterCtaWrapper>
     <FooterCopyrightWrapper>
       <FooterInnerWrapper>      
-        Rentiamo - zarządzanie nieruchomościami z gwarancją czynszu dla właściciela. Copyright&copy;2018
+        Rentiamo - zarządzanie nieruchomościami z gwarancją czynszu dla właściciela.
+ Copyright&copy;2018
       </FooterInnerWrapper>
     </FooterCopyrightWrapper>
   </FooterWrapper>

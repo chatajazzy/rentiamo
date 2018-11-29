@@ -90,7 +90,7 @@ const Header = ({ props }) => (
           <StyledRentiamoLogo src={RentiamoLogo} />
         </LogoLink>
       </LogoWrapper>
-      <Navigation/>
+      <Navigation />
     </HeaderBar>
     <div style={{maxWidth: '1200px', margin: 'auto', padding: '0 15px'}}>
       <HeaderTextContainer isVisible={props && props.path == '/*' ? true : false}>
