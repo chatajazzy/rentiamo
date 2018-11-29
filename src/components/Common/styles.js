@@ -11,7 +11,7 @@ export const SectionHeading = styled.h2`
   color: black;
   font-size: 1.75em;
   margin: 100px auto 0;
-color: white;
+  color: black;
 
   &:after {
     content: '';
@@ -28,6 +28,40 @@ color: white;
   }
 `;
 export const SectionSubheading = styled.p`
+  text-align: center;
+  color: #545454;
+  font-size: 14px;
+  margin: 20px auto;
+  color: black;
+
+  @media (min-width: 768px) {
+    max-width: 550px;
+    font-size: 16px;
+  }
+`;
+
+export const SubpageHeading = styled.h2`
+  text-align: center;
+  color: black;
+  font-size: 1.75em;
+  margin: 100px auto 0;
+  color: white;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #4064d7;
+    margin: 30px auto;
+    
+  }
+  @media (min-width: 768px) {
+    font-size: 2.5em;
+    max-width: 650px;
+  }
+`;
+export const SubpageSubheading = styled.p`
   text-align: center;
   color: #545454;
   font-size: 14px;
