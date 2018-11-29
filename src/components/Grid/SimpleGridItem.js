@@ -20,9 +20,21 @@ const SimpleGridContentText = styled.p`
 `
 const StyledItem = styled.li`
   text-align: center;
-  padding: 25px;
   flex-basis: 0;
-  flex: 33.33%;
+  flex: 100%;
+  margin-bottom: 50px;
+  @media (min-width: 500px) {
+    flex: 50%;
+  }
+  @media (min-width: 768px) {
+    flex: 33.33%;
+    margin-bottom: unset;
+    padding: 25px;
+  }
+
+  &:last-child {
+    margin-bottom: unset;
+  }
 `
 
 const SimpleGridItem = (props) => (

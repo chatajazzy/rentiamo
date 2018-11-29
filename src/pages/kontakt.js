@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { 
   StyledWrapper, 
@@ -37,7 +36,6 @@ const SubpageContentHeading = styled.h3`
 `;
 
 const IndexPage = () => ( 
-  <PageTransition transitionTime={1200}>
     <div>
       <Header/>
       <SubpageHero image={ContactImage}/>
@@ -73,7 +71,6 @@ const IndexPage = () => (
       </StyledWrapper>
       <Footer/>
     </div>
-  </PageTransition>
 )
 
 export default IndexPage

@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
+  pathPrefix: '/rentiamo',
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -14,7 +15,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-page-transitions',
 
     // {
     //   resolve: `gatsby-plugin-manifest`,

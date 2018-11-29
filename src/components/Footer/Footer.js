@@ -3,6 +3,10 @@ import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
   width: 100%;
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: unset;
+  }
 `;
 const FooterCtaWrapper = styled.div`
   background: #4064d7;
@@ -38,9 +42,14 @@ const FooterCtaBtn = styled.a`
   letter-spacing: 3px;
   font-weight: 600;
   font-size: 0.9em;
+  margin-bottom: 25px;
   &:hover {
     background: white;
     color: #4064d7;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
   }
 `;
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core';
-import PageTransition from 'gatsby-plugin-page-transitions';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { 
@@ -32,13 +31,22 @@ import Footer from '../components/Footer/Footer';
 
 import { gridData, listData, cardsGridData } from '../data/data';
 
-AOS.init({ duration: 1200, once: true });
 library.add(faEnvelope, faKey, faLock, faAward, faChartLine, faSmile, faGlobe, faCity, faUsers, faClock, faHouseDamage, faExclamation, faMapMarkerAlt, faPhone, faGem, faRocket, faUserTie);
 
-const IndexPage = (props) => (
-  <PageTransition transitionTime={1200}>
-    <div>  
-      <Header props={props}/>
+
+
+export default class IndexPage extends React.Component {
+  componentDidMount() {
+    try {
+      AOS.init({ duration: 1200, once: true });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  render() {
+    return (
+      <div>  
+      <Header props={this.props}/>
       <StyledWrapper>
         <SectionHeading id="intro-section" data-aos="fade-up">
           Potrzebujesz zarządzania z gwarancją czynszu?
@@ -64,7 +72,7 @@ const IndexPage = (props) => (
       </StyledWrapper>
       <Footer/>
     </div>
-  </PageTransition>
-)
+    )
+  }
+}
 
-export default IndexPage

@@ -1,5 +1,4 @@
 import React from 'react'
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { 
   StyledWrapper, 
@@ -34,7 +33,6 @@ const gridData = [
 ]
 
 const IndexPage = () => (
-  <PageTransition transitionTime={1200}>
     <div>
       <Header/>
       <SubpageHero image={AboutImage}/>
@@ -53,7 +51,6 @@ const IndexPage = () => (
       </StyledWrapper>
       <Footer/>
     </div>
-  </PageTransition>
 )
 
 export default IndexPage
