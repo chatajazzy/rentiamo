@@ -61,7 +61,7 @@ const SubpageContentHeading = styled.h3`
   font-size: 1.75em;
 `;
 
-const IndexPage = () => (
+const IndexPage = () => ( 
   <div>
     <Header/>
     <SubpageHero />

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
@@ -43,10 +42,6 @@ const FooterCtaBtn = styled.a`
     background: white;
     color: #4064d7;
   }
-`;
-const StyledLink = styled(Link)`
-  color: red;
-  text-decoration: none;
 `;
 
 const FooterInnerWrapper = styled.div`

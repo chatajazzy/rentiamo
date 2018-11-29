@@ -43,11 +43,7 @@ const SubpageIntroText = styled.div`
 const SubpageContent = styled.div`
   margin: 50px 0;
 `;
-const EmptyInfo = styled.p`
-  font-size: 1.75em;
-  font-weight: 700;
-  text-align: center;
-`;
+
 const IndexPage = () => (
   <div>
   <Header/>

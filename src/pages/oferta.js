@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { createGlobalStyle } from "styled-components"
+import styled from 'styled-components'
 import { StyledWrapper, SectionHeading, SectionSubheading } from '../components/Common/styles';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';

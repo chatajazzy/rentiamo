@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import CheckedIcon from '../../images/checked-icon.svg';
@@ -22,11 +21,6 @@ const ListItem = styled.li`
   @media (min-width: 768px) {
     width: 50%;
   }
-`;
-
-const StyledLink = styled(Link)`
-  color: red;
-  text-decoration: none;
 `;
 
 const StyledIcon = styled.img`

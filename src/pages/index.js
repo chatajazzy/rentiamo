@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled from "styled-components"
 
 import { StyledWrapper, SectionHeading, SectionSubheading } from '../components/Common/styles';
 import Header from '../components/Header/Header';

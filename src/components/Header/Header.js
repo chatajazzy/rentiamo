@@ -88,7 +88,7 @@ const HeaderCtaBtn = styled.a`
 const StyledRentiamoLogo = styled.img`
 `;
 const Header = ({ props }) => (
-  <HeaderWrapper isHeroVisible={props && props.path == '/*' ? true : false}>
+  <HeaderWrapper isHeroVisible={props && props.path === '/*' ? true : false}>
     <HeaderBar>
       <LogoWrapper>
         <LogoLink to={'/'}>
@@ -98,7 +98,7 @@ const Header = ({ props }) => (
       <Navigation />
     </HeaderBar>
     <div style={{maxWidth: '1200px', margin: 'auto', padding: '0 15px'}}>
-      <HeaderTextContainer isVisible={props && props.path == '/*' ? true : false}>
+      <HeaderTextContainer isVisible={props && props.path === '/*' ? true : false}>
         <HeaderHeading>Zarządzanie najmem z gwarancją czynszu</HeaderHeading>
         <HeaderSubheading>Wynajmiemy mieszkanie na długi termin i zajmiemy się najmem za Ciebie!</HeaderSubheading>
         <HeaderCtaBtn href="#">Sprawdź Ofertę</HeaderCtaBtn>
