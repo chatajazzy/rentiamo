@@ -7,61 +7,8 @@ import CardsGrid from '../components/Grid/CardsGrid';
 import SimpleList from '../components/List/SimpleList';
 import Footer from '../components/Footer/Footer';
 
-import CheckedIcon from '../images/checked-icon.svg';
+import { gridData, listData, cardsGridData } from '../data/data';
 
-const gridData = [
-  {
-    icon: CheckedIcon,
-    title: 'Kim jesteśmy',
-    text: 'atext test'
-  },
-  {
-    icon: CheckedIcon,
-    title: 'Nasza misja',
-    text: 'btext test'
-  },
-  {
-    icon: CheckedIcon,
-    title: 'Nasze wartości',
-    text: 'ctext test'
-  },
-]
-
-const listData = [
-  {
-    icon: CheckedIcon,
-    title: 'Kim jesteśmy',
-    text: 'atext test'
-  },
-  {
-    icon: CheckedIcon,
-    title: 'Nasza misja',
-    text: 'btext test'
-  },
-  {
-    icon: CheckedIcon,
-    title: 'Nasze wartości',
-    text: 'ctext test'
-  },
-]
-
-const cardsGridData = [
-  {
-    icon: CheckedIcon,
-    title: 'Kim jesteśmy',
-    text: 'atext test'
-  },
-  {
-    icon: CheckedIcon,
-    title: 'Nasza misja',
-    text: 'btext test'
-  },
-  {
-    icon: CheckedIcon,
-    title: 'Nasze wartości',
-    text: 'ctext test'
-  },
-]
 const IndexPage = (props) => (
   <div>  
     <Header props={props}/>
