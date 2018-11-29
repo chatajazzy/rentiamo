@@ -1,44 +1,19 @@
 import React from 'react'
 import styled from "styled-components"
 
-import { StyledWrapper, SubpageHeading, SubpageSubheading } from '../components/Common/styles';
+import { 
+  StyledWrapper, 
+  SubpageHeading, 
+  SubpageSubheading, 
+  SubpageHero, 
+  SubpageIntroText, 
+  SubpageContent 
+} from '../components/Common/styles';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import ContactMap from '../components/ContactMap';
+
 import ContactImage from '../images/contact-image.jpg';
-import Map from '../components/Map';
-
-const SubpageHero = styled.div`
-  width: 100%;
-  background-image: url(${ContactImage}); 
-  min-height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-  &:after {
-    background-image: linear-gradient(180deg, #3a3a3a 0%, #1d1d23 100%);
-    opacity: 0.5;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
-  @media (min-width: 768px) {
-    min-height: 500px;
-  }
-`;
-
-const SubpageIntroText = styled.div`
-  width: 100%;
-  position: absolute;
-  top: 150px;
-  @media (min-width: 768px) {
-    top: 170px;
-  }
-`;
 
 const SubpageContentWrapper = styled.div`
   display: flex;
@@ -54,9 +29,7 @@ const SubpageContentWrapper = styled.div`
 const MapWrapper = styled.div`
   margin: 20px 0;
 `;
-const SubpageContent = styled.div`
-  margin: 50px 0;
-`;
+
 const SubpageContentHeading = styled.h3`
   font-size: 1.75em;
 `;
@@ -64,7 +37,7 @@ const SubpageContentHeading = styled.h3`
 const IndexPage = () => ( 
   <div>
     <Header/>
-    <SubpageHero />
+    <SubpageHero image={ContactImage}/>
     <SubpageIntroText>
       <SubpageHeading>Kontakt</SubpageHeading>
       <SubpageSubheading>Skontaktuj sie z nami</SubpageSubheading>
@@ -81,7 +54,7 @@ const IndexPage = () => (
             <p>Tel: 695 931 615</p>
           </div>
           <MapWrapper>
-            <Map isMarkerShown/>
+            <ContactMap isMarkerShown/>
           </MapWrapper>
         </SubpageContentWrapper>
       </SubpageContent>  

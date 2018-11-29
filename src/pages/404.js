@@ -7,7 +7,7 @@ const NotFoundPage = () => (
   <div>
     <Header/>
     <h1>Nie ma takiej strony</h1>
-    <Link to={'/'}>Wróć na start</Link>
+    <Link to={'/'}>Powrót</Link>
   </div>
 )
 
