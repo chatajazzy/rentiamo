@@ -30,7 +30,7 @@ const CardContentText = styled.p`
 
 `
 const CardsGridItem = (props) => (
-  <StyledItem>
+  <StyledItem data-aos="flip-left" data-aos-delay="250">
     <IconContainer>
       <StyledIcon>      
         <FontAwesomeIcon icon={props.value.icon} />

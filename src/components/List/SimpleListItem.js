@@ -21,7 +21,7 @@ const StyledIcon = styled.img`
   margin-right: 15px;
 `;
 const SimpleListItem = (props) => (
-  <StyledItem>
+  <StyledItem data-aos="fade-right">
       <StyledIcon src={props.value.icon}/>
       <p>
         {props.value.text}

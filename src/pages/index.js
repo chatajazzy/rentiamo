@@ -1,5 +1,8 @@
 import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core';
+import PageTransition from 'gatsby-plugin-page-transitions';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import { 
   faEnvelope, 
   faKey, 
@@ -29,36 +32,39 @@ import Footer from '../components/Footer/Footer';
 
 import { gridData, listData, cardsGridData } from '../data/data';
 
+AOS.init({ duration: 1200, once: true });
 library.add(faEnvelope, faKey, faLock, faAward, faChartLine, faSmile, faGlobe, faCity, faUsers, faClock, faHouseDamage, faExclamation, faMapMarkerAlt, faPhone, faGem, faRocket, faUserTie);
 
 const IndexPage = (props) => (
-  <div>  
-    <Header props={props}/>
-    <StyledWrapper>
-      <SectionHeading id="intro-section">
-        Potrzebujesz zarządzania z gwarancją czynszu?
-      </SectionHeading>
-      <SectionSubheading>
-        Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
-      </SectionSubheading>
-      <SimpleGrid gridData={gridData} />
-      <SectionHeading>
-        Mamy na to sposób
-      </SectionHeading>
-      <SectionSubheading>
-        Zobacz co możemy zrobić dla Ciebie i twojego mieszkania.
-      </SectionSubheading>
-      <SimpleList listData={listData}/>
-      <SectionHeading>
-        Dlaczego wybrac Rentiamo?
-      </SectionHeading>
-      <SectionSubheading>
-        Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
-      </SectionSubheading>
-      <CardsGrid gridData={cardsGridData}/>
-    </StyledWrapper>
-    <Footer/>
-  </div>
+  <PageTransition transitionTime={1200}>
+    <div>  
+      <Header props={props}/>
+      <StyledWrapper>
+        <SectionHeading id="intro-section" data-aos="fade-up">
+          Potrzebujesz zarządzania z gwarancją czynszu?
+        </SectionHeading>
+        <SectionSubheading data-aos="fade-up" data-aos-delay="50">
+          Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
+        </SectionSubheading>
+        <SimpleGrid gridData={gridData} />
+        <SectionHeading data-aos="fade-up">
+          Mamy na to sposób
+        </SectionHeading>
+        <SectionSubheading data-aos="fade-up" data-aos-delay="50">
+          Zobacz co możemy zrobić dla Ciebie i twojego mieszkania.
+        </SectionSubheading>
+        <SimpleList listData={listData}/>
+        <SectionHeading data-aos="fade-up">
+          Dlaczego wybrac Rentiamo?
+        </SectionHeading>
+        <SectionSubheading data-aos="fade-up" data-aos-delay="50">
+          Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
+        </SectionSubheading>
+        <CardsGrid gridData={cardsGridData}/>
+      </StyledWrapper>
+      <Footer/>
+    </div>
+  </PageTransition>
 )
 
 export default IndexPage

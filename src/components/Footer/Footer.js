@@ -69,10 +69,16 @@ const Footer = ({ props }) => (
     <FooterCtaWrapper>
       <FooterCtaInnerWrapper>      
         <FooterCtaText>   
-          <FooterCtaHeading>Chciałbyś z nami współpracować?</FooterCtaHeading>
-          <FooterCtaSubheading>Myślisz, że wynajem z gwarancją czynszu to coś dla Ciebie? Masz pytania o szczegóły współpracy? A może szukasz partnera biznesowego? Zadzwoń.</FooterCtaSubheading>
+          <FooterCtaHeading data-aos="fade-in">
+            Chciałbyś z nami współpracować?
+          </FooterCtaHeading>
+          <FooterCtaSubheading data-aos="fade-in">
+            Myślisz, że wynajem z gwarancją czynszu to coś dla Ciebie? Masz pytania o szczegóły współpracy? A może szukasz partnera biznesowego? Zadzwoń.
+          </FooterCtaSubheading>
         </FooterCtaText>
-        <FooterCtaBtn href="tel:695931615">695 931 615</FooterCtaBtn>
+        <FooterCtaBtn href="tel:695931615" data-aos="zoom-in">
+          695 931 615
+        </FooterCtaBtn>
       </FooterCtaInnerWrapper>
     </FooterCtaWrapper>
     <FooterCopyrightWrapper>

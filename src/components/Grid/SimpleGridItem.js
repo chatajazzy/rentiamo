@@ -26,7 +26,7 @@ const StyledItem = styled.li`
 `
 
 const SimpleGridItem = (props) => (
-  <StyledItem>
+  <StyledItem data-aos="fade-up" data-delay="250">
     <IconContainer>
       <StyledIcon>      
         <FontAwesomeIcon icon={props.value.icon} />

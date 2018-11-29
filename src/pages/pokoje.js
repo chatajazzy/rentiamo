@@ -1,4 +1,5 @@
 import React from 'react'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { 
   StyledWrapper, 
@@ -15,24 +16,26 @@ import Footer from '../components/Footer/Footer';
 import RoomImage from '../images/room-image.jpg';
 
 const IndexPage = () => (
-  <div>
-  <Header/>
-  <SubpageHero image={RoomImage}/>
-  <SubpageIntroText>
-    <SubpageHeading>
-      Pokoje
-    </SubpageHeading>
-    <SubpageSubheading>
-      Zobacz nasze realizacje
-    </SubpageSubheading>
-  </SubpageIntroText>
-  <StyledWrapper> 
-    <SubpageContent>
-      <EmptyInfo>Zdjecia juz wkrotce!</EmptyInfo>
-    </SubpageContent>
-  </StyledWrapper>
-  <Footer/>
-</div>
+  <PageTransition transitionTime={1200}>
+    <div>
+      <Header/>
+      <SubpageHero image={RoomImage}/>
+      <SubpageIntroText>
+        <SubpageHeading data-aos="fade-right">
+          Pokoje
+        </SubpageHeading>
+        <SubpageSubheading data-aos="fade-left" data-aos-delay="250">
+          Zobacz nasze realizacje
+        </SubpageSubheading>
+      </SubpageIntroText>
+      <StyledWrapper> 
+        <SubpageContent>
+          <EmptyInfo data-aos-delay="500">Zdjecia juz wkrotce!</EmptyInfo>
+        </SubpageContent>
+      </StyledWrapper>
+      <Footer/>
+    </div>
+  </PageTransition>
 )
 
 export default IndexPage

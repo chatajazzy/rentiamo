@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { 
   StyledWrapper, 
@@ -36,41 +37,43 @@ const SubpageContentHeading = styled.h3`
 `;
 
 const IndexPage = () => ( 
-  <div>
-    <Header/>
-    <SubpageHero image={ContactImage}/>
-    <SubpageIntroText>
-      <SubpageHeading>Kontakt</SubpageHeading>
-      <SubpageSubheading>Skontaktuj sie z nami</SubpageSubheading>
-    </SubpageIntroText>
-    <StyledWrapper>
-      <SubpageContent>      
-        <SubpageContentWrapper>
-          <div>
-            <SubpageContentHeading>
-              Czekamy na Twoją wiadomość
-            </SubpageContentHeading>
-            <p>
-              <FontAwesomeIcon icon="map-marker-alt" style={{ marginRight: '10px'}} />
-              Górna Wilda 71/72, 61-564 Poznań
-            </p>
-            <p>
-              <FontAwesomeIcon icon="envelope" style={{ marginRight: '10px'}} />
-              kontakt@rentiamo.pl
-            </p>
-            <p>
-              <FontAwesomeIcon icon="phone" style={{ marginRight: '10px'}} />
-              695 931 615
-            </p>
-          </div>
-          <MapWrapper>
-            <ContactMap isMarkerShown/>
-          </MapWrapper>
-        </SubpageContentWrapper>
-      </SubpageContent>  
-    </StyledWrapper>
-    <Footer/>
-  </div>
+  <PageTransition transitionTime={1200}>
+    <div>
+      <Header/>
+      <SubpageHero image={ContactImage}/>
+      <SubpageIntroText>
+        <SubpageHeading data-aos="fade-right">Kontakt</SubpageHeading>
+        <SubpageSubheading data-aos="fade-left" data-aos-delay="250">Skontaktuj sie z nami</SubpageSubheading>
+      </SubpageIntroText>
+      <StyledWrapper>
+        <SubpageContent>      
+          <SubpageContentWrapper>
+            <div>
+              <SubpageContentHeading data-aos="zoom-in-right" data-aos-delay="500">
+                Czekamy na Twoją wiadomość
+              </SubpageContentHeading>
+              <p>
+                <FontAwesomeIcon icon="map-marker-alt" style={{ marginRight: '10px'}} />
+                Górna Wilda 71/72, 61-564 Poznań
+              </p>
+              <p>
+                <FontAwesomeIcon icon="envelope" style={{ marginRight: '10px'}} />
+                kontakt@rentiamo.pl
+              </p>
+              <p>
+                <FontAwesomeIcon icon="phone" style={{ marginRight: '10px'}} />
+                695 931 615
+              </p>
+            </div>
+            <MapWrapper>
+              <ContactMap isMarkerShown/>
+            </MapWrapper>
+          </SubpageContentWrapper>
+        </SubpageContent>  
+      </StyledWrapper>
+      <Footer/>
+    </div>
+  </PageTransition>
 )
 
 export default IndexPage

@@ -99,9 +99,13 @@ const Header = ({ props }) => (
     </HeaderBar>
     <div style={{maxWidth: '1200px', margin: 'auto', padding: '0 15px'}}>
       <HeaderTextContainer isVisible={props && props.path === '/*' ? true : false}>
-        <HeaderHeading>Zarządzanie najmem z gwarancją czynszu</HeaderHeading>
-        <HeaderSubheading>Wynajmiemy mieszkanie na długi termin i zajmiemy się najmem za Ciebie!</HeaderSubheading>
-        <HeaderCtaBtn href="#intro-section">Sprawdź</HeaderCtaBtn>
+        <HeaderHeading data-aos="fade-up">
+          Zarządzanie najmem z gwarancją czynszu
+        </HeaderHeading>
+        <HeaderSubheading data-aos="fade-up" data-aos-delay="250">
+          Wynajmiemy mieszkanie na długi termin i zajmiemy się najmem za Ciebie!
+        </HeaderSubheading>
+        <HeaderCtaBtn href="#intro-section" data-aos="fade-down" data-aos-delay="500">Sprawdź</HeaderCtaBtn>
       </HeaderTextContainer>
     </div>
   </HeaderWrapper>

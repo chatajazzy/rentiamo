@@ -1,4 +1,5 @@
 import React from 'react'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { 
   StyledWrapper, 
@@ -33,24 +34,26 @@ const gridData = [
 ]
 
 const IndexPage = () => (
-  <div>
-    <Header/>
-    <SubpageHero image={AboutImage}/>
-    <SubpageIntroText>
-      <SubpageHeading>
-        O nas
-      </SubpageHeading>
-      <SubpageSubheading>
-        Parę informacji o Rentiamo
-      </SubpageSubheading>
-    </SubpageIntroText>
-    <StyledWrapper> 
-      <SubpageContent>
-        <SimpleGrid gridData={gridData} />
-      </SubpageContent>
-    </StyledWrapper>
-    <Footer/>
-  </div>
+  <PageTransition transitionTime={1200}>
+    <div>
+      <Header/>
+      <SubpageHero image={AboutImage}/>
+      <SubpageIntroText>
+        <SubpageHeading data-aos="fade-right">
+          O nas
+        </SubpageHeading>
+        <SubpageSubheading data-aos="fade-left" data-aos-delay="250">
+          Parę informacji o Rentiamo
+        </SubpageSubheading>
+      </SubpageIntroText>
+      <StyledWrapper> 
+        <SubpageContent>
+          <SimpleGrid gridData={gridData} data-aos-delay="500" />
+        </SubpageContent>
+      </StyledWrapper>
+      <Footer/>
+    </div>
+  </PageTransition>
 )
 
 export default IndexPage
