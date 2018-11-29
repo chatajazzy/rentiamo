@@ -2,6 +2,7 @@ import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import SmoothScroll from 'smooth-scroll';
 import { 
   faEnvelope, 
   faKey, 
@@ -38,6 +39,11 @@ library.add(faEnvelope, faKey, faLock, faAward, faChartLine, faSmile, faGlobe, f
 export default class IndexPage extends React.Component {
   componentDidMount() {
     try {
+      // console.log('test', document.querySelector('a[href^="#"]'))
+      const scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 400,
+        offset: 25
+      });
       AOS.init({ duration: 1200, once: true });
     } catch (e) {
       console.error(e);
