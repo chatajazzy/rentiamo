@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const StyledItem = styled.li`
   text-align: center;
@@ -15,8 +16,9 @@ const StyledItem = styled.li`
 const IconContainer = styled.div`
 
 `
-const StyledIcon = styled.img`
-
+const StyledIcon = styled.span`
+  color: #4064d7;
+  font-size: 4em;
 `
 const CardContent = styled.div`
 
@@ -30,7 +32,9 @@ const CardContentText = styled.p`
 const CardsGridItem = (props) => (
   <StyledItem>
     <IconContainer>
-      <StyledIcon src={props.value.icon}/>
+      <StyledIcon>      
+        <FontAwesomeIcon icon={props.value.icon} />
+      </StyledIcon>
     </IconContainer> 
     <CardContent>
       <CardContentHeading>

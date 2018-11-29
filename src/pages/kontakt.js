@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { 
   StyledWrapper, 
@@ -49,9 +50,18 @@ const IndexPage = () => (
             <SubpageContentHeading>
               Czekamy na Twoją wiadomość
             </SubpageContentHeading>
-            <p>Adres: Górna Wilda 71/72, 61-564 Poznań</p>
-            <p>Email: kontakt@rentiamo.pl</p>
-            <p>Tel: 695 931 615</p>
+            <p>
+              <FontAwesomeIcon icon="map-marker-alt" style={{ marginRight: '10px'}} />
+              Górna Wilda 71/72, 61-564 Poznań
+            </p>
+            <p>
+              <FontAwesomeIcon icon="envelope" style={{ marginRight: '10px'}} />
+              kontakt@rentiamo.pl
+            </p>
+            <p>
+              <FontAwesomeIcon icon="phone" style={{ marginRight: '10px'}} />
+              695 931 615
+            </p>
           </div>
           <MapWrapper>
             <ContactMap isMarkerShown/>

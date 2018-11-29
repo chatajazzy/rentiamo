@@ -20,13 +20,12 @@ const StyledIcon = styled.img`
   width: 20px;
   margin-right: 15px;
 `;
-
 const SimpleListItem = (props) => (
   <StyledItem>
-    <StyledIcon src={props.value.icon}/>
-    <p>
-      {props.value.text}
-    </p>
+      <StyledIcon src={props.value.icon}/>
+      <p>
+        {props.value.text}
+      </p>
   </StyledItem>
 )
 

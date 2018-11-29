@@ -1,4 +1,24 @@
 import React from 'react'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+  faEnvelope, 
+  faKey, 
+  faLock, 
+  faAward, 
+  faChartLine, 
+  faSmile,
+  faGlobe,
+  faCity,
+  faUsers,
+  faClock,
+  faHouseDamage,
+  faExclamation,
+  faMapMarkerAlt,
+  faPhone,
+  faGem,
+  faRocket,
+  faUserTie
+} from '@fortawesome/free-solid-svg-icons';
 
 import { StyledWrapper, SectionHeading, SectionSubheading } from '../components/Common/styles';
 import Header from '../components/Header/Header';
@@ -9,11 +29,13 @@ import Footer from '../components/Footer/Footer';
 
 import { gridData, listData, cardsGridData } from '../data/data';
 
+library.add(faEnvelope, faKey, faLock, faAward, faChartLine, faSmile, faGlobe, faCity, faUsers, faClock, faHouseDamage, faExclamation, faMapMarkerAlt, faPhone, faGem, faRocket, faUserTie);
+
 const IndexPage = (props) => (
   <div>  
     <Header props={props}/>
     <StyledWrapper>
-      <SectionHeading>
+      <SectionHeading id="intro-section">
         Potrzebujesz zarządzania z gwarancją czynszu?
       </SectionHeading>
       <SectionSubheading>

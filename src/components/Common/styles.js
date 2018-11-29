@@ -77,12 +77,12 @@ export const SubpageSubheading = styled.p`
 
 export const SubpageHero = styled.div`
   width: 100%;
-  background-image: url(${props && props.image ? props.image : 'none'});
   min-height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-image: ${props => props.image ? `url(${props.image})` : 'none'};
 
   &:after {
     background-image: linear-gradient(180deg, #3a3a3a 0%, #1d1d23 100%);
