@@ -28,6 +28,8 @@ const HeaderBar = styled.div`
 `;
 const LogoWrapper = styled.h1`
   text-align: center;
+  margin: 15px 0;
+  max-height: 50px;
   @media (min-width: 768px) {
     text-align: left;
   }
@@ -35,6 +37,8 @@ const LogoWrapper = styled.h1`
 const LogoLink = styled(Link)`
   color: black;
   text-decoration: none;
+  max-width: 150px;
+  display: block;
 `;
 const HeaderTextContainer = styled.div`
   display: ${props => (props.isVisible ? 'block' : 'none')};
@@ -74,6 +78,7 @@ const HeaderCtaBtn = styled.a`
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
+  font-size: 0.9em;
   &:hover {
     color: white;
     background: #4064d7;
