@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from "styled-components"
 
-import CheckedIcon from '../../images/checked-icon.svg';
+import SimpleListItem from './SimpleListItem';
 
 const StyledList = styled.ul`
   width: 100%;
@@ -10,60 +10,16 @@ const StyledList = styled.ul`
   margin: 0;
   padding: 0;
 `;
-const ListItem = styled.li`
-  display: flex;
-  color: black;
-  padding: 15px;
-  text-decoration: none;
-  list-style-type: none;
-  width: 100%;
-  align-items: center;
-  @media (min-width: 768px) {
-    width: 50%;
+
+export default class SimpleList extends Component {
+  render() {
+    const list = this.props.listData.map(
+      (item, index) => <SimpleListItem key={index} value={item} />
+    )
+    return (
+      <StyledList>
+        {list}
+      </StyledList>
+    )
   }
-`;
-
-const StyledIcon = styled.img`
-  display: block;
-  height: 20px;
-  width: 20px;
-  margin-right: 15px;
-`;
-const SimpleList = ({ props }) => (
-  <StyledList>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
-    </ListItem>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
-    </ListItem>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
-    </ListItem>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
-    </ListItem>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
-    </ListItem>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
-    </ListItem>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Wynajmiemy Twoją nieruchomość na kilka lat.</p>
-    </ListItem>
-    <ListItem>
-      <StyledIcon src={CheckedIcon}/>
-      <p>Odświeżymy mieszkanie, jeśli jest to potrzebne.</p>
-    </ListItem>
-  </StyledList>
-)
-
-export default SimpleList
+}
