@@ -34,25 +34,45 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Navigation = ({ props }) => (
+const Navigation = (props) => (
   <NavigationWrapper>
     <NavigationItem>
-      <StyledLink to={'/o-nas'}>
+      <StyledLink 
+        to={'/o-nas'} 
+        activeStyle={{
+          color: "#4064d7",
+        }}
+      >
         O nas
       </StyledLink>
     </NavigationItem>
     <NavigationItem>
-      <StyledLink to={'/oferta'}>
+      <StyledLink 
+        to={'/oferta'}
+        activeStyle={{
+          color: "#4064d7",
+        }}
+      >
         Oferta
       </StyledLink>
     </NavigationItem>
     <NavigationItem>
-      <StyledLink to={'/pokoje'}>
+      <StyledLink 
+        to={'/pokoje'}
+        activeStyle={{
+          color: "#4064d7",
+        }}
+      >
         Pokoje
       </StyledLink>
     </NavigationItem>
     <NavigationItem>
-      <StyledLink to={'/kontakt'}>
+      <StyledLink 
+        to={'/kontakt'}
+        activeStyle={{
+          color: "#4064d7",
+        }}
+      >
         Kontakt
       </StyledLink>
     </NavigationItem>

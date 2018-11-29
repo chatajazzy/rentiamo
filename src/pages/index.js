@@ -39,7 +39,6 @@ library.add(faEnvelope, faKey, faLock, faAward, faChartLine, faSmile, faGlobe, f
 export default class IndexPage extends React.Component {
   componentDidMount() {
     try {
-      // console.log('test', document.querySelector('a[href^="#"]'))
       const scroll = new SmoothScroll('a[href*="#"]', {
         speed: 400,
         offset: 25
@@ -52,32 +51,32 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <div>  
-      <Header props={this.props}/>
-      <StyledWrapper>
-        <SectionHeading id="intro-section" data-aos="fade-up">
-          Potrzebujesz zarządzania z gwarancją czynszu?
-        </SectionHeading>
-        <SectionSubheading data-aos="fade-up" data-aos-delay="50">
-          Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
-        </SectionSubheading>
-        <SimpleGrid gridData={gridData} />
-        <SectionHeading data-aos="fade-up">
-          Mamy na to sposób
-        </SectionHeading>
-        <SectionSubheading data-aos="fade-up" data-aos-delay="50">
-          Zobacz co możemy zrobić dla Ciebie i twojego mieszkania.
-        </SectionSubheading>
-        <SimpleList listData={listData}/>
-        <SectionHeading data-aos="fade-up">
-          Dlaczego wybrac Rentiamo?
-        </SectionHeading>
-        <SectionSubheading data-aos="fade-up" data-aos-delay="50">
-          Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
-        </SectionSubheading>
-        <CardsGrid gridData={cardsGridData}/>
-      </StyledWrapper>
-      <Footer/>
-    </div>
+        <Header props={this.props}/>
+        <StyledWrapper>
+          <SectionHeading id="intro-section" data-aos="fade-up">
+            Potrzebujesz zarządzania z gwarancją czynszu?
+          </SectionHeading>
+          <SectionSubheading data-aos="fade-up" data-aos-delay="50">
+            Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
+          </SectionSubheading>
+          <SimpleGrid gridData={gridData} />
+          <SectionHeading data-aos="fade-up">
+            Mamy na to sposób
+          </SectionHeading>
+          <SectionSubheading data-aos="fade-up" data-aos-delay="50">
+            Zobacz co możemy zrobić dla Ciebie i twojego mieszkania.
+          </SectionSubheading>
+          <SimpleList listData={listData}/>
+          <SectionHeading data-aos="fade-up">
+            Dlaczego wybrac Rentiamo?
+          </SectionHeading>
+          <SectionSubheading data-aos="fade-up" data-aos-delay="50">
+            Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
+          </SectionSubheading>
+          <CardsGrid gridData={cardsGridData}/>
+        </StyledWrapper>
+        <Footer/>
+      </div>
     )
   }
 }
