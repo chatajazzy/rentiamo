@@ -28,7 +28,7 @@ const IndexPage = () => (
       </SubpageIntroText>
       <StyledWrapper> 
         <SubpageContent>
-          <EmptyInfo data-aos-delay="500">Zdjecia juz wkrotce!</EmptyInfo>
+          <EmptyInfo data-aos-delay="500">Zdjęcia już wkrótce!</EmptyInfo>
         </SubpageContent>
       </StyledWrapper>
       <Footer/>

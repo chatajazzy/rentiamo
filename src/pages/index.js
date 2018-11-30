@@ -57,21 +57,21 @@ export default class IndexPage extends React.Component {
             Potrzebujesz zarządzania z gwarancją czynszu?
           </SectionHeading>
           <SectionSubheading data-aos="fade-up" data-aos-delay="50">
-            Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
+            Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij się do nas! Jesteśmy pewni, że możemy Ci pomóc.
           </SectionSubheading>
           <SimpleGrid gridData={gridData} />
           <SectionHeading data-aos="fade-up">
             Mamy na to sposób
           </SectionHeading>
           <SectionSubheading data-aos="fade-up" data-aos-delay="50">
-            Zobacz co możemy zrobić dla Ciebie i twojego mieszkania.
+            Zobacz co możemy zrobić dla Ciebie i Twojego mieszkania.
           </SectionSubheading>
           <SimpleList listData={listData}/>
           <SectionHeading data-aos="fade-up">
-            Dlaczego wybrac Rentiamo?
+            Dlaczego wybrać Rentiamo?
           </SectionHeading>
           <SectionSubheading data-aos="fade-up" data-aos-delay="50">
-            Jeśli na któreś z poniższych pytań odpowiadasz twierdząco odezwij sie do nas! Jesteśmy pewni, że mozemy Ci pomóc.
+            Decydując się na współpracę z naszą firmą unikniesz wszelkich uciążliwości związanych z wynajmem swojego mieszkania.
           </SectionSubheading>
           <CardsGrid gridData={cardsGridData}/>
         </StyledWrapper>

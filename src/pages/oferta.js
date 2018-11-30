@@ -25,7 +25,7 @@ const IndexPage = () => (
           Oferta
         </SubpageHeading>
         <SubpageSubheading data-aos="fade-left" data-aos-delay="250">
-          Zobacz co mozemy Ci zaoferować
+          Zobacz co możemy Ci zaoferować
         </SubpageSubheading>
       </SubpageIntroText>
       <StyledWrapper> 

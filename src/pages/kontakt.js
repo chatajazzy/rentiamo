@@ -41,7 +41,7 @@ const IndexPage = () => (
       <SubpageHero image={ContactImage}/>
       <SubpageIntroText>
         <SubpageHeading data-aos="fade-right">Kontakt</SubpageHeading>
-        <SubpageSubheading data-aos="fade-left" data-aos-delay="250">Skontaktuj sie z nami</SubpageSubheading>
+        <SubpageSubheading data-aos="fade-left" data-aos-delay="250">Skontaktuj się z nami</SubpageSubheading>
       </SubpageIntroText>
       <StyledWrapper>
         <SubpageContent>      
