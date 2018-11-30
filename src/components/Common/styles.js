@@ -44,7 +44,7 @@ export const SubpageHeading = styled.h2`
   text-align: center;
   color: black;
   font-size: 1.75em;
-  margin: 100px auto 0;
+  margin: 80px auto 0;
   color: white;
 
   &:after {
@@ -59,6 +59,7 @@ export const SubpageHeading = styled.h2`
   @media (min-width: 768px) {
     font-size: 2.5em;
     max-width: 650px;
+    margin: 100px auto 0;
   }
 `;
 export const SubpageSubheading = styled.p`
